@@ -1,5 +1,6 @@
 package com.appkey.moviecatalog.activity;
 
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.os.Bundle;
@@ -76,5 +77,9 @@ public class MainActivity extends AppCompatActivity {
         Configuration configuration = resources.getConfiguration();
         configuration.locale = locale;
         resources.updateConfiguration(configuration, displayMetrics);
+        Intent refresh = new Intent(this, MainActivity.class);
+        finish();
+        startActivity(refresh);
+
     }
 }
