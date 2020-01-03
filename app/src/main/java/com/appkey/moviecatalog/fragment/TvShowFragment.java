@@ -24,7 +24,6 @@ import java.util.ArrayList;
 public class TvShowFragment extends Fragment implements TvShowAdapter.SelectedTvShow{
 
     private ArrayList<TvShow> list = new ArrayList<>();
-    RecyclerView recyclerView;
 
     public TvShowFragment() {
         // Required empty public constructor
@@ -42,7 +41,7 @@ public class TvShowFragment extends Fragment implements TvShowAdapter.SelectedTv
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        recyclerView = view.findViewById(R.id.recyclerview_tvshow);
+        RecyclerView recyclerView = view.findViewById(R.id.recyclerview_tvshow);
         recyclerView.setHasFixedSize(true);
 
         list.addAll(getTvShow());
@@ -52,15 +51,15 @@ public class TvShowFragment extends Fragment implements TvShowAdapter.SelectedTv
         recyclerView.setAdapter(tvShowAdapter);
     }
 
-    public ArrayList<TvShow> getTvShow() {
+    private ArrayList<TvShow> getTvShow() {
         String[] dataTitle = getResources().getStringArray(R.array.data_tvshow_title);
         String[] dataDesc = getResources().getStringArray(R.array.data_tvshow_desc);
         TypedArray dataPoster = getResources().obtainTypedArray(R.array.data_tvshow_poster);
         ArrayList<TvShow> listTvShow = new ArrayList<>();
         for (int i = 0; i < dataTitle.length; i++) {
             TvShow tvShow = new TvShow();
-            tvShow.setJudul(dataTitle[i]);
-            tvShow.setDeskripsi(dataDesc[i]);
+            tvShow.setTitle(dataTitle[i]);
+            tvShow.setDescription(dataDesc[i]);
             tvShow.setPoster(dataPoster.getResourceId(i, -1));
             list.add(tvShow);
         }

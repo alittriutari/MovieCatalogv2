@@ -64,8 +64,8 @@ public class MainActivity extends AppCompatActivity {
 
     private void viewPagerAdapter(){
         adapter = new ViewPagerAdapter(getSupportFragmentManager());
-        adapter.addFragment(new MoviesFragment(), "Movies");
-        adapter.addFragment(new TvShowFragment(), "TV Show");
+        adapter.addFragment(new MoviesFragment(), getString(R.string.movies));
+        adapter.addFragment(new TvShowFragment(), getString(R.string.tvshow));
         viewPager.setAdapter(adapter);
         tabLayout.setupWithViewPager(viewPager);
     }

@@ -4,34 +4,34 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 public class Movie implements Parcelable {
-    private String judul;
-    private String deskripsi;
+    private String title;
+    private String description;
     private int poster;
 
     public Movie() {
 
     }
 
-    public Movie(String judul, String deskripsi, int poster) {
-        this.judul = judul;
-        this.deskripsi = deskripsi;
+    public Movie(String title, String description, int poster) {
+        this.title = title;
+        this.description = description;
         this.poster = poster;
     }
 
-    public String getJudul() {
-        return judul;
+    public String getTitle() {
+        return title;
     }
 
-    public void setJudul(String judul) {
-        this.judul = judul;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
-    public String getDeskripsi() {
-        return deskripsi;
+    public String getDescription() {
+        return description;
     }
 
-    public void setDeskripsi(String deskripsi) {
-        this.deskripsi = deskripsi;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public int getPoster() {
@@ -43,8 +43,8 @@ public class Movie implements Parcelable {
     }
 
     protected Movie(Parcel in) {
-        judul = in.readString();
-        deskripsi = in.readString();
+        title = in.readString();
+        description = in.readString();
         poster = in.readInt();
     }
 
@@ -67,8 +67,8 @@ public class Movie implements Parcelable {
 
     @Override
     public void writeToParcel(Parcel parcel, int i) {
-        parcel.writeString(judul);
-        parcel.writeString(deskripsi);
+        parcel.writeString(title);
+        parcel.writeString(description);
         parcel.writeInt(poster);
     }
 }

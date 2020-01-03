@@ -6,6 +6,9 @@
     <string name="bahasa">Bahasa</string>
     <string name="english">English</string>
 
+    <string name="movie_poster">this image contain a movies poster</string>
+    <string name="tvshow_poster">this button contain a tv show poster</string>
+
     <string-array name="data_title">
         <item>A Star Is Born</item>
         <item>Aquaman</item>

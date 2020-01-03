@@ -38,8 +38,8 @@ public class TvShowAdapter extends RecyclerView.Adapter<TvShowAdapter.ViewHolder
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         TvShow tvShow = listTvShow.get(position);
-        holder.txtTVTitle.setText(tvShow.getJudul());
-        holder.txtTVDesc.setText(tvShow.getDeskripsi());
+        holder.txtTVTitle.setText(tvShow.getTitle());
+        holder.txtTVDesc.setText(tvShow.getDescription());
         Glide.with(holder.itemView.getContext()).load(tvShow.getPoster()).into(holder.imgTVPoster);
     }
 
@@ -48,7 +48,7 @@ public class TvShowAdapter extends RecyclerView.Adapter<TvShowAdapter.ViewHolder
         return listTvShow.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
+    class ViewHolder extends RecyclerView.ViewHolder {
         @BindView(R.id.ivTVShowPoster)
         ImageView imgTVPoster;
         @BindView(R.id.tvTVShowTitle)
@@ -58,12 +58,7 @@ public class TvShowAdapter extends RecyclerView.Adapter<TvShowAdapter.ViewHolder
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             ButterKnife.bind(this, itemView);
-            itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    selectedTvShow.selectedTvShow(listTvShow.get(getAdapterPosition()));
-                }
-            });
+            itemView.setOnClickListener(v -> selectedTvShow.selectedTvShow(listTvShow.get(getAdapterPosition())));
         }
     }
 

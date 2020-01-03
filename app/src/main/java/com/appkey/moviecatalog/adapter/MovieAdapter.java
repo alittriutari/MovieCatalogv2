@@ -39,8 +39,8 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Movie movie = listMovie.get(position);
-        holder.txtMovieTitle.setText(movie.getJudul());
-        holder.txtMovieDesc.setText(movie.getDeskripsi());
+        holder.txtMovieTitle.setText(movie.getTitle());
+        holder.txtMovieDesc.setText(movie.getDescription());
         Glide.with(holder.itemView.getContext()).load(movie.getPoster()).into(holder.imgMoviePoster);
     }
 
@@ -61,12 +61,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             ButterKnife.bind(this, itemView);
-            itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    selectedMovie.selectedMovie(listMovie.get(getAdapterPosition()));
-                }
-            });
+            itemView.setOnClickListener(v -> selectedMovie.selectedMovie(listMovie.get(getAdapterPosition())));
         }
     }
 

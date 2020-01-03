@@ -7,6 +7,9 @@
     <string name="bahasa">Bahasa</string>
     <string name="english">English</string>
 
+    <string name="movie_poster">gambar ini berisi poster film</string>
+    <string name="tvshow_poster">gambar ini berisi poster serial tv</string>
+
     <string-array name="data_title">
         <item>A Star Is Born</item>
         <item>Aquaman</item>

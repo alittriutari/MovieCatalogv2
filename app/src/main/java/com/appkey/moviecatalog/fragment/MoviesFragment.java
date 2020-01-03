@@ -24,7 +24,6 @@ import java.util.ArrayList;
 public class MoviesFragment extends Fragment implements MovieAdapter.SelectedMovie {
 
     private ArrayList<Movie> list = new ArrayList<>();
-    RecyclerView recyclerView;
 
     public MoviesFragment() {
         // Required empty public constructor
@@ -39,7 +38,7 @@ public class MoviesFragment extends Fragment implements MovieAdapter.SelectedMov
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        recyclerView = view.findViewById(R.id.recyclerview_movies);
+        RecyclerView recyclerView = view.findViewById(R.id.recyclerview_movies);
         recyclerView.setHasFixedSize(true);
 
         list.addAll(getMovie());
@@ -49,15 +48,15 @@ public class MoviesFragment extends Fragment implements MovieAdapter.SelectedMov
         recyclerView.setAdapter(movieAdapter);
     }
 
-    public ArrayList<Movie> getMovie() {
+    private ArrayList<Movie> getMovie() {
         String[] dataTitle = getResources().getStringArray(R.array.data_title);
         String[] dataDesc = getResources().getStringArray(R.array.data_desc);
         TypedArray dataPoster = getResources().obtainTypedArray(R.array.data_poster);
         ArrayList<Movie> listMovie = new ArrayList<>();
         for (int i = 0; i < dataTitle.length; i++) {
             Movie movie = new Movie();
-            movie.setJudul(dataTitle[i]);
-            movie.setDeskripsi(dataDesc[i]);
+            movie.setTitle(dataTitle[i]);
+            movie.setDescription(dataDesc[i]);
             movie.setPoster(dataPoster.getResourceId(i, -1));
             list.add(movie);
         }

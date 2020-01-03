@@ -2,6 +2,7 @@ package com.appkey.moviecatalog.activity;
 
 import android.os.Bundle;
 import android.widget.ImageView;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,6 +22,8 @@ public class DetailTvShowActivity extends AppCompatActivity {
     TextView txtTitle;
     @BindView(R.id.tvDesc)
     TextView txtDesc;
+    @BindView(R.id.scrollview)
+    ScrollView scrollView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,8 +32,8 @@ public class DetailTvShowActivity extends AppCompatActivity {
         ButterKnife.bind(this);
 
         TvShow tvShow = getIntent().getParcelableExtra("tvshow");
-        txtTitle.setText(tvShow.getJudul());
-        txtDesc.setText(tvShow.getDeskripsi());
+        txtTitle.setText(tvShow.getTitle());
+        txtDesc.setText(tvShow.getDescription());
         Glide.with(getApplicationContext()).load(tvShow.getPoster()).into(imgPoster);
     }
 }
