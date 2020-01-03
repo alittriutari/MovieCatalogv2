@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Movie Catalog</string>
+
+    <string name="movies">Film</string>
+    <string name="tvshow">Serial TV</string>
+    <string name="bahasa">Bahasa</string>
+    <string name="english">English</string>
+
+    <string-array name="data_title">
+        <item>A Star Is Born</item>
+        <item>Aquaman</item>
+        <item>Avengers: Infinity War</item>
+        <item>Bird Box</item>
+        <item>Bohemian Rhapsody</item>
+        <item>Bumblebee</item>
+        <item>Creed</item>
+        <item>Deadpool</item>
+        <item>How to Train Your Dragon: The Hidden World</item>
+        <item>Venom</item>
+
+    </string-array>
+
+    <string-array name="data_desc">
+        <item>Musisi kawakan Jackson Maine menemukan - dan jatuh cinta dengan - artis yang sedang berjuang Ally. Dia baru saja menyerah pada mimpinya untuk menjadi besar sebagai penyanyi - sampai Jack membujuknya menjadi sorotan. Tetapi bahkan ketika karir Allys lepas landas, sisi pribadi dari hubungan mereka hancur, ketika Jack berjuang secara terus-menerus dengan iblis internalnya sendiri.</item>
+        <item>Dulunya merupakan rumah bagi peradaban paling maju di Bumi, Atlantis sekarang merupakan kerajaan bawah laut yang diperintah oleh Raja Orm yang haus kekuasaan. Dengan pasukan yang sangat besar, Orm berencana untuk menaklukkan orang-orang samudera yang tersisa</item>
+        <item>Ketika Avengers dan sekutu mereka terus melindungi dunia dari ancaman yang terlalu besar untuk ditangani oleh satu pahlawan, bahaya baru telah muncul dari bayang-bayang kosmik: Thanos. Seorang lalim penghinaan intergalaksi, tujuannya adalah untuk mengumpulkan semua enam Batu Infinity, artefak kekuatan yang tak terbayangkan, dan menggunakannya untuk menimbulkan keinginannya yang terpelintir pada semua kenyataan. </item>
+        <item>Lima tahun setelah kehadiran tak terlihat yang tak menyenangkan membuat sebagian besar masyarakat bunuh diri, seorang yang selamat dan dua anaknya melakukan upaya putus asa untuk mencapai keselamatan.</item>
+        <item>Penyanyi Freddie Mercury, gitaris Brian May, drummer Roger Taylor dan gitaris bass John Deacon membawa dunia musik dengan badai ketika mereka membentuk band rock n roll Queen pada tahun 1970. </item>
+        <item>Dalam pelarian pada tahun 1987, Bumblebee menemukan tempat perlindungan di tempat barang rongsokan di kota pantai kecil California. Charlie, di puncak usia 18 tahun dan berusaha menemukan tempatnya di dunia, menemukan Bumblebee, bekas luka pertempuran</item>
+        <item>Mantan Juara Kelas Berat Dunia Rocky Balboa melayani sebagai pelatih dan mentor bagi Adonis Johnson, putra dari almarhum teman dan mantan saingannya Apollo Creed.</item>
+        <item>Deadpool menceritakan kisah asal-usul mantan anggota Pasukan Khusus yang menjadi tentara bayaran Wade Wilson, yang setelah menjadi sasaran percobaan jahat yang membuatnya memiliki kekuatan penyembuhan yang dipercepat, mengadopsi</item>
+        <item>Ketika Hiccup memenuhi mimpinya untuk menciptakan utopia naga yang damai, penemuan Toothless dari pasangan yang tak teruji dan sukar ditangkap membuat Night Fury menjauh. Ketika bahaya meningkat di rumah dan pemerintahan Hiccup sebagai kepala desa diuji</item>
+        <item>Jurnalis investigasi Eddie Brock mencoba untuk kembali setelah skandal, tetapi secara tidak sengaja menjadi tuan rumah Venom, seorang simbiot alien yang sangat kuat dan sakti. Segera, ia harus mengandalkan kekuatan barunya untuk melindungi</item>
+    </string-array>
+
+
+    <array name="data_poster">
+        <item>@drawable/poster_a_star</item>
+        <item>@drawable/poster_aquaman</item>
+        <item>@drawable/poster_avengerinfinity</item>
+        <item>@drawable/poster_birdbox</item>
+        <item>@drawable/poster_bohemian</item>
+        <item>@drawable/poster_bumblebee</item>
+        <item>@drawable/poster_creed</item>
+        <item>@drawable/poster_deadpool</item>
+        <item>@drawable/poster_dragon</item>
+        <item>@drawable/poster_venom</item>
+    </array>
+
+    <string-array name="data_tvshow_title">
+        <item>The Arrow</item>
+        <item>Fairytail</item>
+        <item>The Flash</item>
+        <item>Game of Thrones</item>
+        <item>Gotham</item>
+        <item>Hanna</item>
+        <item>Ncis</item>
+        <item>Riverdale</item>
+        <item>Shameless</item>
+        <item>Supergirl</item>
+
+    </string-array>
+
+    <string-array name="data_tvshow_desc">
+        <item>Playboy miliarder manja, Oliver Queen, hilang dan diduga tewas ketika kapal pesiarnya hilang di laut. Dia kembali lima tahun kemudian seorang pria yang berubah, bertekad untuk membersihkan kota sebagai main hakim sendiri bersenjatakan busur.</item>
+        <item>Dahulu kala di pegunungan, seorang master pertempuran yang dikenal sebagai Gohan menemukan seorang bocah aneh yang ia beri nama Goku. Gohan membesarkannya dan melatih Goku dalam seni bela diri sampai dia mati. Bocah muda dan sangat kuat itu ada di tangannya</item>
+        <item>Setelah akselerator partikel menyebabkan badai aneh, Penyelidik CSI Barry Allen disambar petir dan jatuh koma. Beberapa bulan kemudian dia bangun dengan kekuatan kecepatan super, memberinya kemampuan untuk bergerak</item>
+        <item>Tujuh keluarga bangsawan berjuang untuk menguasai tanah mitos Westeros. Gesekan antara rumah-rumah mengarah ke perang skala penuh. Semua sementara kejahatan yang sangat kuno terbangun di utara terjauh. Di tengah perang, terabaikan</item>
+        <item>Sebelum ada Batman, ada GOTHAM. Semua orang tahu nama Komisaris Gordon. Dia adalah salah satu musuh terbesar dunia kejahatan, seorang pria yang reputasinya identik dengan hukum dan ketertiban. Tapi apa yang diketahui</item>
+        <item>Drama yang menegangkan dan menjadi dewasa ini mengikuti perjalanan seorang gadis muda yang luar biasa ketika ia menghindari pengejaran tanpa henti dari seorang agen CIA yang tidak ada buku dan mencoba untuk menggali kebenaran di balik siapa dirinya.</item>
+        <item>Dari pembunuhan dan spionase hingga terorisme dan kapal selam curian, tim agen khusus menyelidiki kejahatan apa pun yang memiliki sedikit bukti yang terhubung dengan personel Korps Angkatan Laut dan Laut, terlepas dari pangkat atau jabatannya.</item>
+        <item>Berada di masa kini, seri ini menawarkan pandangan yang berani dan subversif pada Archie, Betty, Veronica dan teman-teman mereka, menjelajahi surreality kehidupan kota kecil, kegelapan dan keanehan yang menggelegak di bawah Riverdales yang sehat</item>
+        <item>Chicagoan Frank Gallagher adalah ayah tunggal yang bangga dari enam anak yang cerdas, rajin, mandiri, yang tanpa dia akan ... mungkin lebih baik. Ketika Frank tidak di bar menghabiskan sedikit uang yang mereka miliki, dia ...</item>
+        <item>Kara Zor-El, 24 tahun, yang ditangkap oleh keluarga Danvers ketika dia berusia 13 tahun setelah diusir dari Krypton, harus belajar merangkul kekuatannya setelah sebelumnya menyembunyikannya. Danvers mengajarinya</item>
+    </string-array>
+
+    <array name="data_tvshow_poster">
+        <item>@drawable/poster_arrow</item>
+        <item>@drawable/poster_dragon_ball</item>
+        <item>@drawable/poster_flash</item>
+        <item>@drawable/poster_god</item>
+        <item>@drawable/poster_gotham</item>
+        <item>@drawable/poster_hanna</item>
+        <item>@drawable/poster_ncis</item>
+        <item>@drawable/poster_riverdale</item>
+        <item>@drawable/poster_shameless</item>
+        <item>@drawable/poster_supergirl</item>
+    </array>
+</resources>

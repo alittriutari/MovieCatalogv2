@@ -1,6 +1,5 @@
-package com.appkey.moviecatalog;
+package com.appkey.moviecatalog.adapter;
 
-import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,8 +9,9 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.appkey.moviecatalog.R;
+import com.appkey.moviecatalog.model.Movie;
 import com.bumptech.glide.Glide;
-import com.bumptech.glide.request.RequestOptions;
 
 import java.util.ArrayList;
 
@@ -21,11 +21,13 @@ import butterknife.ButterKnife;
 public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> {
 
     private ArrayList<Movie> listMovie;
-    Context context;
+    private SelectedMovie selectedMovie;
 
-    public MovieAdapter(ArrayList<Movie> listMovie) {
+    public MovieAdapter(ArrayList<Movie> listMovie, SelectedMovie selectedMovie) {
         this.listMovie = listMovie;
+        this.selectedMovie = selectedMovie;
     }
+
 
     @NonNull
     @Override
@@ -39,11 +41,9 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
         Movie movie = listMovie.get(position);
         holder.txtMovieTitle.setText(movie.getJudul());
         holder.txtMovieDesc.setText(movie.getDeskripsi());
-        Glide.with(holder.itemView.getContext())
-                .load(movie.getPoster())
-                .apply(new RequestOptions().override(55, 55))
-                .into(holder.imgMoviePoster);
+        Glide.with(holder.itemView.getContext()).load(movie.getPoster()).into(holder.imgMoviePoster);
     }
+
 
     @Override
     public int getItemCount() {
@@ -61,7 +61,16 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             ButterKnife.bind(this, itemView);
-
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    selectedMovie.selectedMovie(listMovie.get(getAdapterPosition()));
+                }
+            });
         }
+    }
+
+    public interface SelectedMovie {
+        void selectedMovie(Movie movie);
     }
 }

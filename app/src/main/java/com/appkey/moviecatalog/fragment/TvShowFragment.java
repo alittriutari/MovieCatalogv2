@@ -1,6 +1,8 @@
-package com.appkey.moviecatalog;
+package com.appkey.moviecatalog.fragment;
 
 
+import android.content.Intent;
+import android.content.res.TypedArray;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,9 +14,14 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.appkey.moviecatalog.activity.DetailTvShowActivity;
+import com.appkey.moviecatalog.R;
+import com.appkey.moviecatalog.adapter.TvShowAdapter;
+import com.appkey.moviecatalog.model.TvShow;
+
 import java.util.ArrayList;
 
-public class TvShowFragment extends Fragment {
+public class TvShowFragment extends Fragment implements TvShowAdapter.SelectedTvShow{
 
     private ArrayList<TvShow> list = new ArrayList<>();
     RecyclerView recyclerView;
@@ -41,22 +48,29 @@ public class TvShowFragment extends Fragment {
         list.addAll(getTvShow());
 
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-        TvShowAdapter tvShowAdapter = new TvShowAdapter(list);
+        TvShowAdapter tvShowAdapter = new TvShowAdapter(list, this);
         recyclerView.setAdapter(tvShowAdapter);
     }
 
     public ArrayList<TvShow> getTvShow() {
         String[] dataTitle = getResources().getStringArray(R.array.data_tvshow_title);
         String[] dataDesc = getResources().getStringArray(R.array.data_tvshow_desc);
-        String[] dataPoster = getResources().getStringArray(R.array.data_tvshow_poster);
+        TypedArray dataPoster = getResources().obtainTypedArray(R.array.data_tvshow_poster);
         ArrayList<TvShow> listTvShow = new ArrayList<>();
         for (int i = 0; i < dataTitle.length; i++) {
             TvShow tvShow = new TvShow();
             tvShow.setJudul(dataTitle[i]);
             tvShow.setDeskripsi(dataDesc[i]);
-            tvShow.setPoster(dataPoster[i]);
+            tvShow.setPoster(dataPoster.getResourceId(i, -1));
             list.add(tvShow);
         }
         return listTvShow;
+    }
+
+    @Override
+    public void selectedTvShow(TvShow tvShow) {
+        Intent intent = new Intent(getActivity(), DetailTvShowActivity.class);
+        intent.putExtra("tvshow", tvShow);
+        startActivity(intent);
     }
 }

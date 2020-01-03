@@ -1,4 +1,4 @@
-package com.appkey.moviecatalog;
+package com.appkey.moviecatalog.adapter;
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;

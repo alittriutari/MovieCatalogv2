@@ -1,4 +1,4 @@
-package com.appkey.moviecatalog;
+package com.appkey.moviecatalog.model;
 
 import android.os.Parcel;
 import android.os.Parcelable;
@@ -6,13 +6,13 @@ import android.os.Parcelable;
 public class Movie implements Parcelable {
     private String judul;
     private String deskripsi;
-    private String poster;
+    private int poster;
 
     public Movie() {
 
     }
 
-    public Movie(String judul, String deskripsi, String poster) {
+    public Movie(String judul, String deskripsi, int poster) {
         this.judul = judul;
         this.deskripsi = deskripsi;
         this.poster = poster;
@@ -34,18 +34,18 @@ public class Movie implements Parcelable {
         this.deskripsi = deskripsi;
     }
 
-    public String getPoster() {
+    public int getPoster() {
         return poster;
     }
 
-    public void setPoster(String poster) {
+    public void setPoster(int poster) {
         this.poster = poster;
     }
 
     protected Movie(Parcel in) {
         judul = in.readString();
         deskripsi = in.readString();
-        poster = in.readString();
+        poster = in.readInt();
     }
 
     public static final Creator<Movie> CREATOR = new Creator<Movie>() {
@@ -69,6 +69,6 @@ public class Movie implements Parcelable {
     public void writeToParcel(Parcel parcel, int i) {
         parcel.writeString(judul);
         parcel.writeString(deskripsi);
-        parcel.writeString(poster);
+        parcel.writeInt(poster);
     }
 }
